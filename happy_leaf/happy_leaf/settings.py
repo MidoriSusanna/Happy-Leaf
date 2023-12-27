@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'django_todo.urls'
+ROOT_URLCONF = 'happy_leaf.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_todo.wsgi.application'
+WSGI_APPLICATION = 'happy_leaf.wsgi.application'
 
 
 # Database
