@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['happy-leaf.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['happy-leaf-454cbc041048.herokuapp.com']
 
 
 # Application definition
