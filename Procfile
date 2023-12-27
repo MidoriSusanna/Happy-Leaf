@@ -1,1 +1,1 @@
-web: gunicorn happy_leaf.happy_leaf.wsgi
+web: gunicorn happy_leaf.wsgi
