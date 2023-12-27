@@ -1,5 +1,5 @@
 """
-ASGI config for django_todo project.
+ASGI config for happy_leaf project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
