@@ -9,3 +9,7 @@ p {
     font-family: 'PT Sans', sans-serif;
     color:#333F48;
 }
+/* Header*/
+#nav-element {
+    background-color: #1FAB89;
+}
