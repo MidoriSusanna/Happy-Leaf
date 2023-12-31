@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=PT+Sans&display=swap');
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Comfortaa', sans-serif;
     color:white;
 }
 
-p {
+body {
     font-family: 'PT Sans', sans-serif;
     color:#333F48;
 }
 /* Header*/
-#nav-element {
-    background-color: #1FAB89;
+#navbar-element.navbar {
+    background-color: #1FAB89 !important;
+}
+#navbar-element.navbar .nav-link {
+    font-family: 'Comfortaa', sans-serif !important;
+    color:white;
 }
