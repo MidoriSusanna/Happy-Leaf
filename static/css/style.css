@@ -9,11 +9,42 @@ body {
     font-family: 'PT Sans', sans-serif;
     color:#333F48;
 }
-/* Header*/
+/* Header -navbar*/
 #navbar-element.navbar {
     background-color: #1FAB89 !important;
 }
 #navbar-element.navbar .nav-link {
     font-family: 'Comfortaa', sans-serif !important;
     color:white;
+    font-size: 20px;
+}
+#nav-pic {
+    width: 40%;
+    height: auto;
+    word-spacing: 20%;
+}
+/* Carousel*/
+#carousel-row {
+    height: 300px;
+}
+.carousel-caption h5 {
+    font-size: 26px !important;
+    background-color:#019267;
+    padding: 10px;
+}
+.carousel-caption p {
+    font-size: 20px !important;
+    background-color:#1FAB89;
+    padding: 10px;
+}
+.carousel-caption {
+    position: absolute;
+    right: 30%;
+    bottom: 20px;
+    left: 30%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
 }
