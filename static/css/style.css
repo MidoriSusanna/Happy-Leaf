@@ -24,9 +24,6 @@ body {
     word-spacing: 20%;
 }
 /* Carousel*/
-#carousel-row {
-    height: 300px;
-}
 .carousel-caption h5 {
     font-size: 26px !important;
     background-color:#019267;
@@ -47,4 +44,18 @@ body {
     padding-bottom: 20px;
     color: #fff;
     text-align: center;
+}
+/* About section*/
+#about-pic {
+    width: 95%;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+#about-text h1{
+    color:#333F48 !important;
+    margin-top: 50px;
+    margin-left: 100px;
+    font-size: 30px;
 }
