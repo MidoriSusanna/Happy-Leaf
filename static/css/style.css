@@ -9,6 +9,10 @@ body {
     font-family: 'PT Sans', sans-serif;
     color:#333F48;
 }
+hr {
+    border: none !important;
+    margin: 5px; 
+}
 /* Header -navbar*/
 #navbar-element.navbar {
     background-color: #1FAB89 !important;
@@ -57,7 +61,30 @@ body {
     color:#333F48 !important;
     margin-top: 50px;
     margin-left: 100px;
-    font-size: 30px;
+    font-size: 26px;
+}
+#about-text h5{
+    color:#333F48 !important;
+    margin-top: 50px;
+    margin-left: 100px;
+    font-size: 20px;
+}
+#about-text p{
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 30px;
+}
+#about-btn{
+    background-color: #1FAB89;
+    color: white;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#about-btn:hover{
+    background-color: #019267;
+    color: white;
+    margin-left: 100px;
 }
 /* Preview section - Check our blog and join the community*/
 #preview-section {
