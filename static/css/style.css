@@ -27,6 +27,10 @@ hr {
     height: auto;
     word-spacing: 20%;
 }
+.nav-item:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
 /* Carousel*/
 .carousel-caption h5 {
     font-size: 26px !important;
@@ -108,3 +112,17 @@ hr {
     background-color: #019267;
     color: white;
 }
+/*Footer*/
+#footer-details{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.list-group-item a {
+    font-family: 'PT Sans', sans-serif;
+    color:#333F48;
+  }
+  
+  .list-group-item a:hover {
+    font-family: 'PT Sans', sans-serif;
+    color:#333F48;
+  }

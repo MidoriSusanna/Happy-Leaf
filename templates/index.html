@@ -12,23 +12,27 @@
       <!---Header with logo and nav element, navigation menu -->
       <header>
          <nav class="navbar navbar-expand-sm" id="navbar-element">
-            <div id="nav-logo">
-               <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1703847174/happy-leaf-website/logo_pogxfb.png" alt="Logo picture" id="nav-pic">
+            <div class="container-fluid">
+               <div class="navbar-header" id="nav-logo">
+                  <a href="#">
+                     <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1703847174/happy-leaf-website/logo_pogxfb.png" alt="Logo picture" id="nav-pic">
+                  </a>
+               </div>
+               <ul class="nav justify-content-end">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Personal area</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                  </li>
+               </ul>
             </div>
-            <ul class="nav justify-content-end">
-               <li class="nav-item">
-                 <a class="nav-link" href="#">About</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link" href="#">Blog</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link" href="#">Personal area</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link" href="#">Contact us</a>
-               </li>
-             </ul>
          </nav>
       </header>
       <main class="grid">
@@ -122,8 +126,24 @@
          </div>
       </main>
       <!--- Footer with contacts and social media -->
-      <footer>
+      <footer class="container-fluid">
+         <div id="footer-details" class="row">
+            <div class="col-4">
+               <img src="..." alt="Logo picture">
+               <p>Join us in fostering a supportive space where we encourage positive change, personal growth, and a collective commitment to a greener world. </p>
+            </div>
+            <div class="col-4">
+               <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="#">About</a></li>
+                  <li class="list-group-item"><a href="#">Blog</a></li>
+                  <li class="list-group-item"><a href="#">Personal area</a></li>
+                  <li class="list-group-item"><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
 
+            </div>
+         </div>
       </footer>
 
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
