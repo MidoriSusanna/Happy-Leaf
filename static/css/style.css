@@ -59,3 +59,25 @@ body {
     margin-left: 100px;
     font-size: 30px;
 }
+/* Preview section - Check our blog and join the community*/
+#preview-section {
+    background-color: #1FAB89 !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.card-title{
+    color:#333F48 !important;
+    font-size: 24px;
+}
+.card-body p{
+    font-family: 'PT Sans', sans-serif;
+    color:#333F48;
+}
+.card-body .btn{
+    background-color: #1FAB89;
+    color: white;
+}
+.card-body .btn:hover{
+    background-color: #019267;
+    color: white;
+}
