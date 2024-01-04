@@ -83,7 +83,7 @@ hr {
     color: white;
     margin-left: 100px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 #about-btn:hover{
     background-color: #019267;
@@ -114,15 +114,34 @@ hr {
 }
 /*Footer*/
 #footer-details{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .list-group-item a {
     font-family: 'PT Sans', sans-serif;
     color:#333F48;
   }
   
-  .list-group-item a:hover {
+.list-group-item a:hover {
     font-family: 'PT Sans', sans-serif;
     color:#333F48;
   }
+#footer-logo {
+    width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+#footer-text {
+    margin-right: 30px;
+    margin-left: 20px;
+}
+.social-networks .list-group-item{
+    color: #1FAB89;
+    margin-left: 50px;
+}
+#social-networks-title{
+    color: #333F48;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
