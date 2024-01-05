@@ -32,6 +32,9 @@ hr {
     text-decoration-color: white;
 }
 /* Carousel*/
+#carousel-section {
+    margin-top: 15px;
+}
 .carousel-caption h5 {
     font-size: 26px !important;
     background-color:#019267;
@@ -92,7 +95,7 @@ hr {
 }
 /* Preview section - Check our blog and join the community*/
 #preview-section {
-    background-color: #1FAB89 !important;
+    background-color: #019267 !important;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -144,4 +147,23 @@ hr {
     color: #333F48;
     margin-left: 50px;
     margin-bottom: 10px;
+}
+/* About page - more information section */
+#about-page-pic {
+    width: 95%;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+#about-page-title{
+    color:#333F48 !important;
+    margin-top: 50px;
+    margin-left: 100px;
+    font-size: 26px;
+}
+.about-page-text{
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 30px;
 }
