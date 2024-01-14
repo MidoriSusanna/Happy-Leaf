@@ -187,6 +187,7 @@ hr {
     background-image: url('https://res.cloudinary.com/dmncxwmip/image/upload/v1703846752/happy-leaf-website/contact-us_bvjhv1.jpg'); 
     background-size: cover; 
     background-position: center; 
+    height: 700px;
     padding: 20px; 
  }
 #submit-btn {
@@ -196,7 +197,8 @@ hr {
 }
 #thank-you-message {
     font-family: 'Comfortaa', sans-serif;
+    font-size: 26px;
     background-color: #1FAB89;
     color: white;
-    padding: 20px;
+    padding: 50px;
 }
