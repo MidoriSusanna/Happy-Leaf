@@ -4,7 +4,9 @@ function sendMail(contactForm) {
     let fromName = document.getElementById('form-group-input1').value;
     let fromSurname = document.getElementById('form-group-input2').value;
     let fromEmail = document.getElementById('email-input').value;
-    let inquiryType = document.getElementById('inquiry-type').value;
+    let inquiryTypeSelect = document.getElementById('inquiry-type');
+    let selectedOption = inquiryTypeSelect.options[inquiryTypeSelect.selectedIndex];
+    let inquiryType = selectedOption.text;
     let message = document.getElementById('textarea-message').value;
 
     // Check if the privacy checkbox is checked
@@ -24,4 +26,10 @@ function sendMail(contactForm) {
         "inquiry_type": inquiryType,
         "message": message
     });
+    // Hide the form container and show the thank you message
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('thank-you-message').style.display = 'block';
+
+    return false;  // To block from loading a new page
 }
+

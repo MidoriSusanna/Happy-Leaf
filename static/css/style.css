@@ -194,3 +194,9 @@ hr {
     color: #1FAB89;
     margin-top: 20px;
 }
+#thank-you-message {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #1FAB89;
+    color: white;
+    padding: 20px;
+}
