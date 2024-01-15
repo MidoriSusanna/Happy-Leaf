@@ -8,6 +8,8 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 """ Create Django POST model from the database scheme """
+
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -34,6 +36,7 @@ class Post(models.Model):
 
 
 """ Create Django COMMENT model from the database scheme """
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
