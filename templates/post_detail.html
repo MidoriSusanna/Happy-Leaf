@@ -46,7 +46,7 @@
                   <div class="row g-0">
                      <div class="col-md-6 masthead-text">
                         <!-- Display the post title using h1 tags -->
-                        <h1 class="post-title">{{ post.title }}</h1>
+                        <h1 class="post-title" id="post-title-1">{{ post.title }}</h1>
                         <!-- Display the post author and creation date -->
                         <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
                      </div>
@@ -93,7 +93,7 @@
                <!-- Comments Section -->
                <div class="row">
                   <div class="col-md-8 card mb-4 mt-3">
-                     <h3>Comments:</h3>
+                     <h3 id="comments-section">Comments:</h3>
                      <div class="card-body">
                         <!-- Iterate through each comment and display commenter's name, creation date, and body -->
                         {% for comment in comments %}

@@ -202,3 +202,13 @@ hr {
     color: white;
     padding: 50px;
 }
+/* Post_detail page */
+#post-title-1 {
+    color: #019267 !important;
+    margin-top: 30px;
+}
+#comments-section {
+    color: #019267 !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
