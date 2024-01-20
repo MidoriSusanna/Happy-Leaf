@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Environment, eco-friendly lifestyle, vegan food">
+      <title>葉 Happy Leaf</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   </head>
+   <body>
+      <!-- Header with logo and nav element, navigation menu -->
+      <header>
+         <nav class="navbar navbar-expand-sm" id="navbar-element">
+            <div class="container-fluid">
+               <div class="navbar-header" id="nav-logo">
+                  <a href="#">
+                  <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705765064/happy-leaf-website/logo_vjxmjz.png"
+                     alt="Logo picture" id="nav-pic">
+                  </a>
+               </div>
+               <ul class="nav justify-content-end">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Personal area</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Contact us</a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <main class="grid">
+         <div class="container-fluid">
+            <!-- Post Header Section -->
+            <div class="masthead">
+               <div class="container">
+                  <div class="row g-0">
+                     <div class="col-md-6 masthead-text">
+                        <!-- Display the post title using h1 tags -->
+                        <h1 class="post-title">{{ post.title }}</h1>
+                        <!-- Display the post author and creation date -->
+                        <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                     </div>
+                     <div class="d-none d-md-block col-md-6 masthead-image">
+                        <!-- Display the featured image if available, else use a default image -->
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705759910/happy-leaf-website/notavailable_cqwccw.png" width="100%">
+                        {% else %}
+                        <img src="{{ post.featured_image.url }}" width="100%">
+                        {% endif %}
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Post Content Section -->
+            <div class="container">
+               <div class="row">
+                  <div class="col card mb-4 mt-3 left top">
+                     <div class="card-body">
+                        <!-- Display the post content inside the card-text -->
+                        <!-- Use the | safe filter to allow HTML in the content -->
+                        <p class="card-text">{{ post.content | safe }}</p>
+                        <div class="row">
+                           <div class="col-1">
+                              <!-- Display the number of likes -->
+                              <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }}</strong>
+                           </div>
+                           <div class="col-1">
+                              <!-- Display the total number of comments -->
+                              {% with comments.count as total_comments %}
+                              <strong class="text-secondary"><i class="far fa-comments"></i> {{ total_comments }}</strong>
+                              {% endwith %}
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col">
+                     <!-- Horizontal line as a separator -->
+                     <hr>
+                  </div>
+               </div>
+               <!-- Comments Section -->
+               <div class="row">
+                  <div class="col-md-8 card mb-4 mt-3">
+                     <h3>Comments:</h3>
+                     <div class="card-body">
+                        <!-- Iterate through each comment and display commenter's name, creation date, and body -->
+                        {% for comment in comments %}
+                        <div class="comments" style="padding: 10px;">
+                           <p class="font-weight-bold">
+                              {{ comment.name }}
+                              <span class="text-muted font-weight-normal">
+                              {{ comment.created_on }} wrote:
+                              </span>
+                           </p>
+                           <!-- Display the body of the comment using linebreaks -->
+                           {{ comment.body | linebreaks }}
+                        </div>
+                        {% endfor %}
+                     </div>
+                  </div>
+                  <!-- Sidebar Section (for later use) -->
+                  <div class="col-md-4 card mb-4 mt-3">
+                     <div class="card-body">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <!-- Footer with contacts and social media -->
+      <footer class="container-fluid">
+         <div id="footer-details" class="row">
+            <div class="col-4">
+               <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1704320191/happy-leaf-website/logo2_q6d6oa.png"
+                  alt="Logo picture" id="footer-logo">
+               <p id="footer-text">Join us in fostering a supportive space where we encourage positive change, personal
+                  growth, and a collective commitment to a greener world. 
+               </p>
+            </div>
+            <div class="col-4">
+               <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="#">About</a></li>
+                  <li class="list-group-item"><a href="#">Blog</a></li>
+                  <li class="list-group-item"><a href="#">Personal area</a></li>
+                  <li class="list-group-item"><a href="#">Contact us</a></li>
+               </ul>
+            </div>
+            <div class="col-4">
+               <h5 id="social-networks-title">Follow us:</h5>
+               <ul class="social-networks list-unstyled">
+                  <li>
+                     <a href="https://facebook.com" target="_blank" rel="noopener"
+                        aria-label="Visit Our Facebook Page (opens in a new tab)"><i
+                        class="fa-brands fa-facebook list-group-item"> happyleaf</i></a>
+                  </li>
+                  <li>
+                     <a href="https://youtube.com" target="_blank" rel="noopener"
+                        aria-label="Visit Our YouTube Page (opens in a new tab)"><i
+                        class="fa-brands fa-youtube list-group-item"> happyleafvideo</i></a>
+                  </li>
+                  <li>
+                     <a href="https://Instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit Our Instagram Page (opens in a new tab)"><i
+                        class="fa-brands fa-instagram list-group-item"> ha.happyleaf</i></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <script src="https://kit.fontawesome.com/ea255401c6.js" crossorigin="anonymous"></script>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+   </body>
+</html>
