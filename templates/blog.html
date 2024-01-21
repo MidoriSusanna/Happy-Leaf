@@ -28,9 +28,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'blog' %}">Blog</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Personal area</a>
-                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Personal area
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="personal-area-dropdown">
+                       <a class="dropdown-item" href="#">Log-in</a>
+                       <a class="dropdown-item" href="#">Sign-up</a>
+                    </div>
+                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'contact_urls' %}">Contact us</a>
                 </li>

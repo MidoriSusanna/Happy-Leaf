@@ -31,6 +31,10 @@ hr {
     text-decoration: underline;
     text-decoration-color: white;
 }
+.dropdown-item {
+    font-family: 'PT Sans', sans-serif;
+    color:#333F48;
+}
 /* Carousel*/
 #carousel-section {
     margin-top: 15px;
