@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -30,7 +31,7 @@
                   </li>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Personal area
+                     Personal area
                      </a>
                      <div class="dropdown-menu" aria-labelledby="personal-area-dropdown">
                         <a class="dropdown-item" href="#">Log-in</a>
@@ -116,9 +117,24 @@
                         {% endfor %}
                      </div>
                   </div>
-                  <!-- Sidebar Section (for later use) -->
+                  <!-- Sidebar Section - Leave a comment -->
                   <div class="col-md-4 card mb-4 mt-3">
                      <div class="card-body">
+                        {% if commented %}
+                        <div class="alert alert-success" role="alert">
+                           Your comment is awaiting approval
+                        </div>
+                        {% else %}
+                        {% if user.is_authenticated %}
+                        <h3 id="comments-section2">Leave a comment:</h3>
+                        <p>Posting as: {{ user.username }}</p>
+                        <form method="post" style="margin-top: 1.3em;">
+                           {{ comment_form | crispy }}
+                           {% csrf_token %}
+                           <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                        </form>
+                        {% endif %}
+                        {% endif %}
                      </div>
                   </div>
                </div>
