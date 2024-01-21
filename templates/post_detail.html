@@ -16,23 +16,23 @@
          <nav class="navbar navbar-expand-sm" id="navbar-element">
             <div class="container-fluid">
                <div class="navbar-header" id="nav-logo">
-                  <a href="#">
+                  <a href="{% url 'index_urls' %}">
                   <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705765064/happy-leaf-website/logo_vjxmjz.png"
                      alt="Logo picture" id="nav-pic">
                   </a>
                </div>
                <ul class="nav justify-content-end">
                   <li class="nav-item">
-                     <a class="nav-link" href="#">About</a>
+                     <a class="nav-link" href="{% url 'about_urls' %}">About</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#">Blog</a>
+                     <a class="nav-link" href="{% url 'blog' %}">Blog</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="#">Personal area</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#">Contact us</a>
+                     <a class="nav-link" href="{% url 'contact_urls' %}">Contact us</a>
                   </li>
                </ul>
             </div>
