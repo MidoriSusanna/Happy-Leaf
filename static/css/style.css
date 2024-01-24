@@ -216,3 +216,24 @@ hr {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+/* Login page */
+#login-details-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background-color: #EEFFE6;
+    border: 8px solid #019267;
+    padding: 20px;
+    border-radius: 10px; 
+}
+#sign-in-title {
+    color: #019267;
+}
+#signin-button {
+background-color: #1FAB89;
+color: white;
+padding: 10px;
+}
+#signin-button:hover{
+background-color: #019267;
+color: white;
+}
