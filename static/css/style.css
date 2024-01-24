@@ -237,3 +237,24 @@ padding: 10px;
 background-color: #019267;
 color: white;
 }
+/* Signup page */
+#signup-details-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background-color: #EEFFE6;
+    border: 8px solid #019267;
+    padding: 20px;
+    border-radius: 10px; 
+}
+#sign-up-title {
+    color: #019267;
+}
+#sign-up-button {
+    background-color: #1FAB89;
+    color: white;
+    padding: 10px;
+}
+#sign-up-button:hover{
+    background-color: #019267;
+    color: white;
+}
