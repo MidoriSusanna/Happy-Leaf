@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
+from .models import Comment
 from .forms import CommentForm
 
 
@@ -62,7 +63,13 @@ class PostDetail(View):
                 "liked": liked
             },
         )
-    
+
+
+    def delete_comment(request, comment_id):
+        comment = get_object_or_404(Comment, id=comment_id)
+        comment.delete()
+        return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
+
 
 class PostLike(View):
     

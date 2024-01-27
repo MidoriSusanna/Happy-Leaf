@@ -85,6 +85,13 @@
                      <!-- Display the body of the comment using linebreaks -->
                      {{ comment.body | linebreaks }}
                   </div>
+                  {% if user.is_authenticated and comment.name == user.username %}
+                  <!-- Add delete button if authenticated user is the commenter -->
+                  <form method="post" action="{% url 'delete_comment' comment.id %}" style="display: inline;">
+                     {% csrf_token %}
+                     <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                  </form>
+                  {% endif %}
                   {% endfor %}
                </div>
             </div>
