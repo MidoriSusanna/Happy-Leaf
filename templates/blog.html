@@ -1,154 +1,56 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Environment, eco-friendly lifestyle, vegan food">
-      <title>葉 Happy Leaf</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
-   </head>
-   <body>
-      <!-- Header with logo and nav element, navigation menu -->
-      <header>
-         <nav class="navbar navbar-expand-sm" id="navbar-element">
-            <div class="container-fluid">
-               <div class="navbar-header" id="nav-logo">
-                  <a href="{% url 'index_urls' %}">
-                  <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705765064/happy-leaf-website/logo_vjxmjz.png"
-                     alt="Logo picture" id="nav-pic">
-                  </a>
-               </div>
-               <ul class="nav justify-content-end">
-                  <li class="nav-item">
-                     <a class="nav-link" href="{% url 'about_urls' %}">About</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-                  </li>
-                  {% if user.is_authenticated %}
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Personal area</a>
-                     <div class="dropdown-menu" aria-labelledby="personal-area-dropdown">
-                        <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
-                     </div>
-                  </li>
-                  {% else %}
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Personal area
-                     </a>
-                     <div class="dropdown-menu" aria-labelledby="personal-area-dropdown">
-                        <a class="dropdown-item" href="{% url 'account_login' %}">Log-in</a>
-                        <a class="dropdown-item" href="{% url 'account_signup' %}">Sign-up</a>
-                     </div>
-                     {% endif %}
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="{% url 'contact_urls' %}">Contact us</a>
-                  </li>
-               </ul>
-            </div>
-         </nav>
-      </header>
-      <main class="grid">
-         <div class="container-fluid">
-            <!-- Blog Entries Column -->
-            <div class="col-12 mt-3 left">
-               <div class="row">
-                  {% for post in post_list %}
-                  <div class="col-md-4">
-                     <div class="card mb-4">
-                        <div class="card-body">
-                           <div class="image-container">
-                              {% if "placeholder" in post.featured_image.url %}
-                              <img class="card-img-top"
-                                 src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705759910/happy-leaf-website/notavailable_cqwccw.png">
-                              {% else %}
-                              <img class="card-img-top" src="{{ post.featured_image.url }}">
-                              {% endif %}
-                              <div class="image-flash">
-                                 <p class="author">Author: {{ post.author }}</p>
-                              </div>
-                           </div>
-                           <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                              <h2 class="card-title">{{ post.title }}</h2>
-                              <p class="card-text">{{ post.excerpt }}</p>
-                           </a>
-                           <hr/>
-                           <p class="card-text text-muted h6">{{ post.created_on}} <i
-                              class="far fa-heart"></i>
-                              {{ post.number_of_likes }}
-                           </p>
+{% extends "base.html" %}
+{% block content %}
+<main class="grid">
+   <div class="container-fluid">
+      <!-- Blog Entries Column -->
+      <div class="col-12 mt-3 left">
+         <div class="row">
+            {% for post in post_list %}
+            <div class="col-md-4">
+               <div class="card mb-4">
+                  <div class="card-body">
+                     <div class="image-container">
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img class="card-img-top"
+                           src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705759910/happy-leaf-website/notavailable_cqwccw.png">
+                        {% else %}
+                        <img class="card-img-top" src="{{ post.featured_image.url }}">
+                        {% endif %}
+                        <div class="image-flash">
+                           <p class="author">Author: {{ post.author }}</p>
                         </div>
                      </div>
+                     <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                        <p class="card-text">{{ post.excerpt }}</p>
+                     </a>
+                     <hr/>
+                     <p class="card-text text-muted h6">{{ post.created_on}} <i
+                        class="far fa-heart"></i>
+                        {{ post.number_of_likes }}
+                     </p>
                   </div>
-                  {% if forloop.counter|divisibleby:3 %}
-               </div>
-               <div class="row">
-                  {% endif %}
-                  {% endfor %}
                </div>
             </div>
-            {% if is_paginated %}
-            <nav aria-label="Page navigation">
-               <ul class="pagination justify-content-center">
-                  {% if page_obj.has_previous %}
-                  <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-                  {% endif %}
-                  {% if page_obj.has_next %}
-                  <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-                  {% endif %}
-               </ul>
-            </nav>
+            {% if forloop.counter|divisibleby:3 %}
+         </div>
+         <div class="row">
             {% endif %}
+            {% endfor %}
          </div>
-      </main>
-      <!-- Footer with contacts and social media -->
-      <footer class="container-fluid">
-         <div id="footer-details" class="row">
-            <div class="col-4">
-               <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1704320191/happy-leaf-website/logo2_q6d6oa.png"
-                  alt="Logo picture" id="footer-logo">
-               <p id="footer-text">Join us in fostering a supportive space where we encourage positive change, personal
-                  growth, and a collective commitment to a greener world. 
-               </p>
-            </div>
-            <div class="col-4">
-               <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><a href="#">About</a></li>
-                  <li class="list-group-item"><a href="#">Blog</a></li>
-                  <li class="list-group-item"><a href="#">Personal area</a></li>
-                  <li class="list-group-item"><a href="#">Contact us</a></li>
-               </ul>
-            </div>
-            <div class="col-4">
-               <h5 id="social-networks-title">Follow us:</h5>
-               <ul class="social-networks list-unstyled">
-                  <li>
-                     <a href="https://facebook.com" target="_blank" rel="noopener"
-                        aria-label="Visit Our Facebook Page (opens in a new tab)"><i
-                        class="fa-brands fa-facebook list-group-item"> happyleaf</i></a>
-                  </li>
-                  <li>
-                     <a href="https://youtube.com" target="_blank" rel="noopener"
-                        aria-label="Visit Our YouTube Page (opens in a new tab)"><i
-                        class="fa-brands fa-youtube list-group-item"> happyleafvideo</i></a>
-                  </li>
-                  <li>
-                     <a href="https://Instagram.com" target="_blank" rel="noopener"
-                        aria-label="Visit Our Instagram Page (opens in a new tab)"><i
-                        class="fa-brands fa-instagram list-group-item"> ha.happyleaf</i></a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-         <script src="https://kit.fontawesome.com/ea255401c6.js" crossorigin="anonymous"></script>
-      </footer>
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-   </body>
-</html>
+      </div>
+      {% if is_paginated %}
+      <nav aria-label="Page navigation">
+         <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+         </ul>
+      </nav>
+      {% endif %}
+   </div>
+</main>
+{%endblock%}
