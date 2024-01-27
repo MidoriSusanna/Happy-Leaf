@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Update comment section -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h3>EDIT COMMENT</h3>
+            <p>Would you like to edit your comment?</p>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" >Update Comment</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

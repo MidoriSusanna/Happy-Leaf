@@ -72,6 +72,37 @@ class CommentDelete(View):
             comment.delete()
         else:
             return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
+        
+
+class CommentEdit(View):
+
+    def get(self, request, comment_id, *args, **kwargs):
+        comment = get_object_or_404(Comment, id=comment_id)
+        form = CommentForm(instance=comment)
+        return render(
+            request,
+            "comment_edit.html",
+            {
+                "comment": comment,
+                "form": form,
+            }
+        )
+
+    def post(self, request, comment_id, *args, **kwargs):
+        comment = get_object_or_404(Comment, id=comment_id)
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
+        else:
+            return render(
+                request,
+                "comment_edit.html",
+                {
+                    "comment": comment,
+                    "form": form,
+                }
+            )
 
 
 class PostLike(View):

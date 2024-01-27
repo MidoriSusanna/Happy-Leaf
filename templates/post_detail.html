@@ -86,11 +86,12 @@
                      {{ comment.body | linebreaks }}
                   </div>
                   {% if user.is_authenticated and comment.name == user.username %}
-                  <!-- Add delete button if authenticated user is the commenter -->
+                  <!-- Add delete and edit buttons if authenticated user is the commenter -->
                   <form method="post" action="{% url 'delete_comment' comment.id %}" style="display: inline;">
                      {% csrf_token %}
                      <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                   </form>
+                  <a href="{% url 'edit_comment' comment.id %}" class="btn btn-sm btn-primary">Edit</a>
                   {% endif %}
                   {% endfor %}
                </div>
