@@ -65,10 +65,13 @@ class PostDetail(View):
         )
 
 
-    def delete_comment(request, comment_id):
+class CommentDelete(View):
+    def post(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id)
-        comment.delete()
-        return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
+        if request.user == comment.post.author:
+            comment.delete()
+        else:
+            return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
 
 
 class PostLike(View):
