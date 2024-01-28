@@ -68,7 +68,7 @@ class PostDetail(View):
 class CommentDelete(View):
     def post(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id)
-        if request.user == comment.post.author:
+        if request.user.is_superuser or request.user.username == comment.name:
             comment.delete()
         else:
             return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
