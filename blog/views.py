@@ -68,7 +68,7 @@ class PostDetail(View):
 class CommentDelete(View):
     def get(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id)
-        return render(request, 'comment_delete.html', {"comment": comment})
+        return render(request, "comment_delete.html", {"comment": comment})
 
     def post(self, request, comment_id, *args, **kwargs):
         comment = get_object_or_404(Comment, id=comment_id)
