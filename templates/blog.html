@@ -18,6 +18,9 @@
                         {% endif %}
                         <div class="image-flash">
                            <p class="author">Author: {{ post.author }}</p>
+                           {% if post.category %}
+                           <p class="category-tag">{{ post.category.name }}</p>
+                           {% endif %}
                         </div>
                      </div>
                      <a href="{% url 'post_detail' post.slug  %}" class="post-link">

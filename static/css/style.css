@@ -258,3 +258,10 @@ color: white;
     background-color: #019267;
     color: white;
 }
+/*Category tags*/
+.category-tag {
+    background-color: #019267;
+    color: white !important;
+    padding: 4px 8px;
+    border-radius: 4px;
+}

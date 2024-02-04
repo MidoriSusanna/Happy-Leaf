@@ -12,6 +12,9 @@
                   <h1 class="post-title" id="post-title-1">{{ post.title }}</h1>
                   <!-- Display the post author and creation date -->
                   <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                  {% if post.category %}
+                  <span class="category-tag">Category: {{ post.category.name }}</span>
+                  {% endif %}
                </div>
                <div class="d-none d-md-block col-md-6 masthead-image">
                   <!-- Display the featured image if available, else use a default image -->
@@ -98,7 +101,7 @@
                <div class="card-body">
                   {% if commented %}
                   <div class="alert alert-success" role="alert">
-                     Your comment is awaiting approval
+                     Your comment was submitted successfully and is awaiting approval
                   </div>
                   {% else %}
                   {% if user.is_authenticated %}
