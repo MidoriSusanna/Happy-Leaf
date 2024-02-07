@@ -2,6 +2,20 @@
 {% block content %}
 <main class="grid">
    <div class="container-fluid">
+      <!-- Search Bar -->
+      <div class="row mt-3">
+         <div class="col-md-6 offset-md-3">
+            <form method="get" action="{% url 'search_blogs' %}">
+               {% csrf_token %}
+               <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search...">
+                  <div class="input-group-append">
+                     <button class="btn btn-outline-secondary" type="submit">Search Blog</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
       <!-- Blog Entries Column -->
       <div class="col-12 mt-3 left">
          <div class="row">

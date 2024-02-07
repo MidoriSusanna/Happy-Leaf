@@ -10,4 +10,5 @@ urlpatterns = [
     path('edit/<int:comment_id>/', views.CommentEdit.as_view(), name='edit_comment'),
     path("", views.PostList.as_view(), name="blog"),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
+    path('search-blogs/', views.BlogSearchView.as_view(), name="search_blogs")
 ]

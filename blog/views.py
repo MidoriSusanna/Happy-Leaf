@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.db.models import Q
 from .models import Post
 from .models import Comment
 from .forms import CommentForm
@@ -122,6 +123,16 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    
+
+class BlogSearchView(generic.ListView):
+    model = Post
+    template_name = 'blog.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get("q")
+        return Post.objects.filter(Q(title__icontains=query) | Q(category__icontains=query)).order_by('-created_on')
+
 
 
 def index(request):
