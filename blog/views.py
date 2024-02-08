@@ -131,7 +131,7 @@ class BlogSearchView(generic.ListView):
 
     def get_queryset(self):
         query = self.request.GET.get("q")
-        return Post.objects.filter(Q(title__icontains=query) | Q(category__icontains=query)).order_by('-created_on')
+        return Post.objects.filter(Q(title__icontains=query) | Q(category__name__icontains=query)).order_by('-created_on')
 
 
 
