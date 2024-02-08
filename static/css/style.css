@@ -265,3 +265,8 @@ color: white;
     padding: 4px 8px;
     border-radius: 4px;
 }
+/* Search Results */
+#search-result {
+    color: #019267;
+    margin: 20px;
+}

@@ -16,6 +16,10 @@
             </form>
          </div>
       </div>
+      <!-- Display results sentence if search_query exists -->
+      {% if search_query %}
+      <h3 id="search-result">Results for "{{ search_query }}":</h3>
+      {% endif %}
       <!-- Blog Entries Column -->
       <div class="col-12 mt-3 left">
          <div class="row">
