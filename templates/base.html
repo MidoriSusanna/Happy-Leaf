@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="Environment, eco-friendly lifestyle, vegan food">
-      <title>葉 Happy Leaf</title>
+      <title>葉 Happy Leaf </title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -17,8 +17,7 @@
             <div class="container-fluid">
                <div class="navbar-header" id="nav-logo">
                   <a href="{% url 'index_urls' %}">
-                  <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705765064/happy-leaf-website/logo_vjxmjz.png"
-                     alt="Logo picture" id="nav-pic">
+                  <h1 id="nav-title-logo">葉 Happy Leaf</h1>
                   </a>
                </div>
                <ul class="nav justify-content-end">
@@ -30,7 +29,7 @@
                   </li>
                   {% if user.is_authenticated %}
                   <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Personal area</a>
+                     <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Join</a>
                      <div class="dropdown-menu" aria-labelledby="personal-area-dropdown">
                         <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
                      </div>
@@ -73,7 +72,7 @@
       <footer class="container-fluid">
          <div id="footer-details" class="row">
             <div class="col-4">
-               <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1704320191/happy-leaf-website/logo2_q6d6oa.png" alt="Logo picture" id="footer-logo">
+               <h1 id="footer-logo">葉 Happy Leaf</h1>
                <p id="footer-text">Join us in fostering a supportive space where we encourage positive change, personal growth, and a collective commitment to a greener world. </p>
             </div>
             <div class="col-4">

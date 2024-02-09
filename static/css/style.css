@@ -2,7 +2,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Comfortaa', sans-serif;
-    color:white;
+    color:#EFE2BA;
 }
 
 body {
@@ -15,21 +15,23 @@ hr {
 }
 /* Header -navbar*/
 #navbar-element.navbar {
-    background-color: #1FAB89 !important;
+    background-color: #215924 !important;
 }
 #navbar-element.navbar .nav-link {
     font-family: 'Comfortaa', sans-serif !important;
-    color:white;
+    color:#EFE2BA;
     font-size: 20px;
 }
-#nav-pic {
-    width: 40%;
-    height: auto;
-    word-spacing: 20%;
+#nav-title-logo {
+    color: #EFE2BA;
+    padding: 5px;
+}
+#nav-title-logo a {
+    text-decoration: none !important;
 }
 .nav-item:hover {
     text-decoration: underline;
-    text-decoration-color: white;
+    text-decoration-color: #EFE2BA;
 }
 .dropdown-item {
     font-family: 'PT Sans', sans-serif;
@@ -38,15 +40,16 @@ hr {
 /* Carousel*/
 #carousel-section {
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 .carousel-caption h5 {
     font-size: 26px !important;
-    background-color:#019267;
+    background-color:#215924;
     padding: 10px;
 }
 .carousel-caption p {
     font-size: 20px !important;
-    background-color:#1FAB89;
+    background-color:#4056A1;
     padding: 10px;
 }
 .carousel-caption {
@@ -57,49 +60,49 @@ hr {
     z-index: 10;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #fff;
+    color: #EFE2BA;
     text-align: center;
 }
 /* About section*/
-#about-pic {
-    width: 95%;
-    height: auto;
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-bottom: 50px;
+#about-index-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #EFE2BA;
+    border: 8px solid #D79922;
+    padding: 10px;
+    border-radius: 10px; 
+}
+#about-text {
+     background-color: #D79922;
 }
 #about-text h1{
     color:#333F48 !important;
     margin-top: 50px;
-    margin-left: 100px;
     font-size: 26px;
 }
 #about-text h5{
     color:#333F48 !important;
     margin-top: 50px;
-    margin-left: 100px;
     font-size: 20px;
 }
 #about-text p{
     margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 #about-btn{
-    background-color: #1FAB89;
-    color: white;
-    margin-left: 100px;
+    background-color: #215924;
+    color: #EFE2BA;
     margin-top: 10px;
     margin-bottom: 30px;
 }
 #about-btn:hover{
-    background-color: #019267;
-    color: white;
-    margin-left: 100px;
+    background-color: #4056A1;
+    color: #EFE2BA;
 }
 /* Preview section - Check our blog and join the community*/
 #preview-section {
-    background-color: #019267 !important;
+    background-color: #215924 !important;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -112,17 +115,18 @@ hr {
     color:#333F48;
 }
 .card-body .btn{
-    background-color: #1FAB89;
-    color: white;
+    background-color: #215924;
+    color: #EFE2BA;
 }
 .card-body .btn:hover{
-    background-color: #019267;
-    color: white;
+    background-color: #4056A1;
+    color: #EFE2BA;
 }
 /*Footer*/
 #footer-details{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EFE2BA;
 }
 .list-group-item a {
     font-family: 'PT Sans', sans-serif;
@@ -134,8 +138,9 @@ hr {
     color:#333F48;
   }
 #footer-logo {
-    width: 60%;
-    height: auto;
+    color: #215924;
+    background-color: #EFE2BA;
+    padding: 10px;
     margin-bottom: 20px;
     margin-left: 20px;
 }
@@ -144,7 +149,7 @@ hr {
     margin-left: 20px;
 }
 .social-networks .list-group-item{
-    color: #1FAB89;
+    color: #215924;
     margin-left: 50px;
 }
 #social-networks-title{
@@ -173,17 +178,17 @@ hr {
 }
 /* About page - meet the team section */
 #meet-team-title {
-    background-color: #019267 !important;
+    background-color: #215924 !important;
     padding-top: 30px;
 }
 #meet-team {
-    background-color: #019267 !important;
+    background-color: #215924 !important;
     padding-top: 30px;
     padding-bottom: 50px;
 }
 /* Contact page - form section */
 #contact-form {
-    background-color: #1FAB89 !important;
+    background-color: #D79922 !important;
     padding: 20px;
     margin: 30px;
 }
@@ -195,8 +200,8 @@ hr {
     padding: 20px; 
  }
 #submit-btn {
-    background-color: white;
-    color: #1FAB89;
+    background-color: #215924;
+    color: #EFE2BA;
     margin-top: 20px;
 }
 #thank-you-message {
@@ -208,11 +213,11 @@ hr {
 }
 /* Post_detail page */
 #post-title-1 {
-    color: #019267 !important;
+    color: #215924 !important;
     margin-top: 30px;
 }
 #comments-section, #comments-section2 {
-    color: #019267 !important;
+    color: #215924 !important;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -220,43 +225,85 @@ hr {
 #login-details-container {
     margin-top: 50px;
     margin-bottom: 100px;
-    background-color: #EEFFE6;
-    border: 8px solid #019267;
+    background-color: #EFE2BA;
+    border: 8px solid #215924;
     padding: 20px;
     border-radius: 10px; 
 }
 #sign-in-title {
-    color: #019267;
+    color: #215924;
 }
 #signin-button {
-background-color: #1FAB89;
-color: white;
+background-color: #215924;
+color: #EFE2BA;
 padding: 10px;
 }
 #signin-button:hover{
-background-color: #019267;
-color: white;
+background-color: #4056A1;
+color: #EFE2BA;
 }
 /* Signup page */
 #signup-details-container {
     margin-top: 50px;
     margin-bottom: 100px;
-    background-color: #EEFFE6;
-    border: 8px solid #019267;
+    background-color: #EFE2BA;
+    border: 8px solid #215924;
     padding: 20px;
     border-radius: 10px; 
 }
 #sign-up-title {
-    color: #019267;
+    color: #215924;
 }
 #sign-up-button {
-    background-color: #1FAB89;
-    color: white;
+    background-color: #215924;
+    color: #EFE2BA;
     padding: 10px;
 }
 #sign-up-button:hover{
-    background-color: #019267;
-    color: white;
+    background-color: #4056A1;
+    color: #EFE2BA;
+}
+/*Reset Password Page*/
+#reset-details-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background-color: #EFE2BA;
+    border: 8px solid #215924;
+    padding: 20px;
+    border-radius: 10px; 
+}
+#password-reset-title {
+color: #215924;
+}
+#reset-password-btn {
+    background-color: #215924;
+    color: #EFE2BA;
+    padding: 10px;
+}
+#reset-password-btn:hover {
+    background-color: #4056A1;
+    color: #EFE2BA;
+}
+/*Log out page*/
+#logout-details-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background-color: #EFE2BA;
+    border: 8px solid #215924;
+    padding: 20px;
+    border-radius: 10px; 
+}
+#logout-title {
+color: #215924;
+}
+#logout-btn {
+    background-color: #215924;
+    color: #EFE2BA;
+    padding: 10px;
+}
+#logout-btn:hover {
+    background-color: #4056A1;
+    color: #EFE2BA;
 }
 /*Category tags*/
 .category-tag {
@@ -267,6 +314,6 @@ color: white;
 }
 /* Search Results */
 #search-result {
-    color: #019267;
+    color: #215924;
     margin: 20px;
 }
