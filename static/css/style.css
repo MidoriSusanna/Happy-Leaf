@@ -215,9 +215,14 @@ a:hover {
 #thank-you-message {
     font-family: 'Comfortaa', sans-serif;
     font-size: 26px;
-    background-color: #1FAB89;
-    color: white;
+    background-color: #215924;
+    color: #EFE2BA;
     padding: 50px;
+}
+/* Blog Page */
+.btn-blog-pages {
+    background-color: #215924;
+    color: #EFE2BA;
 }
 /* Post_detail page */
 #post-title-1 {
@@ -315,8 +320,8 @@ color: #215924;
 }
 /*Category tags*/
 .category-tag {
-    background-color: #019267;
-    color: white !important;
+    background-color: #215924;
+    color: #EFE2BA !important;
     padding: 4px 8px;
     border-radius: 4px;
 }
