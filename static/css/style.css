@@ -222,6 +222,11 @@ a:hover {
     color: #EFE2BA;
     margin-top: 20px;
 }
+#submit-btn:hover {
+    background-color: #4056A1;
+    color: #EFE2BA;
+    margin-top: 20px;
+}
 #thank-you-message {
     font-family: 'Comfortaa', sans-serif;
     font-size: 26px;
@@ -230,6 +235,9 @@ a:hover {
     padding: 50px;
 }
 /* Blog Page */
+.masthead-image {
+    margin-top: 15px !important;
+}
 .btn-blog-pages {
     background-color: #215924;
     color: #EFE2BA;
@@ -249,9 +257,16 @@ a:hover {
     margin-bottom: 10px;
 }
 /* Login page */
+.outer-container {
+    background-image: url('https://res.cloudinary.com/dmncxwmip/image/upload/v1707554412/happy-leaf-website/background-about-section_nhklao.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
 #login-details-container {
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     background-color: #EFE2BA;
     border: 8px solid #215924;
     padding: 20px;
@@ -272,7 +287,7 @@ color: #EFE2BA;
 /* Signup page */
 #signup-details-container {
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     background-color: #EFE2BA;
     border: 8px solid #215924;
     padding: 20px;
@@ -287,27 +302,6 @@ color: #EFE2BA;
     padding: 10px;
 }
 #sign-up-button:hover{
-    background-color: #4056A1;
-    color: #EFE2BA;
-}
-/*Reset Password Page*/
-#reset-details-container {
-    margin-top: 50px;
-    margin-bottom: 100px;
-    background-color: #EFE2BA;
-    border: 8px solid #215924;
-    padding: 20px;
-    border-radius: 10px; 
-}
-#password-reset-title {
-color: #215924;
-}
-#reset-password-btn {
-    background-color: #215924;
-    color: #EFE2BA;
-    padding: 10px;
-}
-#reset-password-btn:hover {
     background-color: #4056A1;
     color: #EFE2BA;
 }
