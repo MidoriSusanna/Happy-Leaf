@@ -27,10 +27,10 @@ hr {
     padding: 5px;
     font-size: 26px;
 }
-#nav-title-logo a {
+a {
     text-decoration: none;
 }
-#nav-title-logo a:hover {
+a:hover {
     text-decoration: none;
 }
 .nav-item:hover {
