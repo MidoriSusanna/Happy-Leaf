@@ -359,3 +359,24 @@ color: #215924;
     background-color: #4056A1;
     color: #EFE2BA;
 }
+/*Edit comment page*/
+#edit-comment-container {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    background-color: #EFE2BA;
+    border: 8px solid #215924;
+    padding: 20px;
+    border-radius: 10px; 
+}
+#edit-comment {
+    color: #215924;
+}
+#edit-comment-btn {
+    background-color: #215924;
+    color: #EFE2BA;
+    padding: 10px;
+}
+#edit-comment-btn:hover{
+    background-color: #4056A1;
+    color: #EFE2BA;
+}
