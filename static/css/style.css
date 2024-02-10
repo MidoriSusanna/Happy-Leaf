@@ -207,7 +207,12 @@ a:hover {
     height: 700px;
     padding: 20px; 
  }
-.form-group, .form-check {
+.form-group label{
+    background-color: #215924;
+    color: #EFE2BA;
+    padding: 5px;
+}
+.form-check label{
     background-color: #215924;
     color: #EFE2BA;
     padding: 5px;
