@@ -93,14 +93,18 @@
    <!-- Join our Community card -->
    <div class="col-md-4 d-flex flex-column align-items-center mb-4">
       <div class="card" style="width: 26rem;">
-         <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1704277942/happy-leaf-website/joincommunity_sloxp1.jpg" class="card-img-top" alt="Group of people sitting on the ground in a green park.">
-         <div class="card-body">
-            <h5 class="card-title">Get involved</h5>
-            <p class="card-text">Ready to make a difference? Join our community and be part of the change. Explore engaging articles, connect with like-minded individuals, and embrace a sustainable lifestyle. Let's shape a greener and healthier world together!</p>
-            <a href="#" class="btn">Join the community</a>
-         </div>
+          <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1704277942/happy-leaf-website/joincommunity_sloxp1.jpg" class="card-img-top" alt="Group of people sitting on the ground in a green park.">
+          <div class="card-body">
+              <h5 class="card-title">Get involved</h5>
+              <p class="card-text">Ready to make a difference? Join our community and be part of the change. Explore engaging articles, connect with like-minded individuals, and embrace a sustainable lifestyle. Let's shape a greener and healthier world together!</p>
+              {% if user.is_authenticated %}
+                  <a href="{% url 'blog' %}" class="btn">Welcome back!</a>
+              {% else %}
+                  <a href="{% url 'account_signup' %}" class="btn">Join the community</a>
+              {% endif %}
+          </div>
       </div>
-   </div>
+  </div>
    <!-- Contact Us card -->
    <div class="col-md-4 d-flex flex-column align-items-center mb-4">
       <div class="card" style="width: 26rem;">

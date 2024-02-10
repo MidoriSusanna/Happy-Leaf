@@ -17,7 +17,7 @@
             <div class="container-fluid">
                <div class="navbar-header" id="nav-logo">
                   <a href="{% url 'index_urls' %}" style="text-decoration: none;">
-                  <h1 id="nav-title-logo">葉 Happy Leaf</h1>
+                     <h1 id="nav-title-logo">葉 Happy Leaf</h1>
                   </a>
                </div>
                <ul class="nav justify-content-end">
@@ -77,10 +77,16 @@
             </div>
             <div class="col-4">
                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><a href="#">About</a></li>
-                  <li class="list-group-item"><a href="#">Blog</a></li>
-                  <li class="list-group-item"><a href="#">Personal area</a></li>
-                  <li class="list-group-item"><a href="#">Contact us</a></li>
+                  <li class="list-group-item"><a href="{% url 'about_urls' %}">About</a></li>
+                  <li class="list-group-item"><a href="{% url 'blog' %}">Blog</a></li>
+                  {% if not user.is_authenticated %}
+                  <!-- Redirect to the sign-up page when clicking "Join" if the user is not authenticated -->
+                  <li class="list-group-item"><a href="{% url 'account_signup' %}">Join</a></li>
+                  {% else %}
+                  <!-- Hide section for authenticated users -->
+                  <li class="list-group-item d-none"><a href="{% url 'account_signup' %}">Join</a></li>
+                  {% endif %}
+                  <li class="list-group-item"><a href="{% url 'contact_urls' %}">Contact us</a></li>
                </ul>
             </div>
             <div class="col-4">
