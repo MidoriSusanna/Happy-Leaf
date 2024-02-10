@@ -168,7 +168,8 @@ a:hover {
 .head-about-pic {
     width: 100%;
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
+    margin-top: 5px;
 }
 #about-page-title{
     color:#333F48 !important;
@@ -186,6 +187,7 @@ a:hover {
 #meet-team-title {
     background-color: #215924 !important;
     padding-top: 30px;
+    margin-top: 50px;
 }
 #meet-team {
     background-color: #215924 !important;
