@@ -338,3 +338,24 @@ color: #215924;
     color: #215924;
     margin: 20px;
 }
+/*Delete Comment Page*/
+.delete-edit-comment {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    background-color: #EFE2BA;
+    border: 8px solid #215924;
+    padding: 20px;
+    border-radius: 10px; 
+}
+#delete-comment {
+    color: #215924;
+}
+#delete-comment-btn {
+    background-color: #215924;
+    color: #EFE2BA;
+    padding: 10px;
+}
+#delete-comment-btn:hover{
+    background-color: #4056A1;
+    color: #EFE2BA;
+}

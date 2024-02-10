@@ -1,21 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-   <div class="row">
-      <div class="col-md-8 mt-3 offset-md-2">
-         <form method="post">
-            {% csrf_token %}
-            <div class="confirmation-message">
-               <p>You are about to delete the following comment:</p>
-               <blockquote>
-                  {{ comment.body }}
-               </blockquote>
-               <p>Are you sure you want to proceed? Please note the action is irreversible.</p>
-            </div>
-            <input type="hidden" name="confirm_delete" value="1">
-            <button type="submit">Yes, delete</button>
-            <a href="{% url 'post_detail' comment.post.slug %}">Cancel</a>
-         </form>
+<div class="outer-container">
+   <div class="container delete-edit-comment">
+      <div class="row">
+         <div class="col-md-8 mt-3 offset-md-2">
+            <form method="post">
+               {% csrf_token %}
+               <div class="confirmation-message">
+                  <h3 id="delete-comment">DELETE COMMENT</h3>
+                  <p>You are about to delete the following comment:</p>
+                  <blockquote>
+                     {{ comment.body }}
+                  </blockquote>
+                  <p>Are you sure you want to proceed? Please note the action is irreversible.</p>
+               </div>
+               <input type="hidden" name="confirm_delete" value="1">
+               <button type="submit" id="delete-comment-btn">Yes, delete</button>
+               <a href="{% url 'post_detail' comment.post.slug %}">Cancel</a>
+            </form>
+         </div>
       </div>
    </div>
 </div>
