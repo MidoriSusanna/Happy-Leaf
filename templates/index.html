@@ -77,29 +77,42 @@
             </div>
          </div>
       </div>
-      <!---Check our blog and Join our Community Preview section -->
-      <div class="row" id="preview-section">
-         <div class="col-6 d-flex flex-column align-items-center">
-            <div class="card" style="width: 26rem;">
-               <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1704277939/happy-leaf-website/divearticles_b7z8oh.jpg" class="card-img-top" alt="Irish landscape, green hills.">
-               <div class="card-body">
-                  <h5 class="card-title">Dive into our latest articles</h5>
-                  <p class="card-text">Immerse yourself in a world of sustainable living. Explore eco-friendly tips to make a positive impact, discover delicious vegan recipes for a cruelty-free culinary journey, and learn about the green initiatives shaping the beautiful landscapes of Ireland.</p>
-                  <a href="{% url 'blog' %}" class="btn">Check our blog</a>
-               </div>
-            </div>
-         </div>
-         <div class="col-6 d-flex flex-column align-items-center">
-            <div class="card" style="width: 26rem;">
-               <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1704277942/happy-leaf-website/joincommunity_sloxp1.jpg" class="card-img-top" alt="Group of people sitting on the ground in a green park.">
-               <div class="card-body">
-                  <h5 class="card-title">Get involved</h5>
-                  <p class="card-text">Ready to make a difference? Join our community and be part of the change. Explore engaging articles, connect with like-minded individuals, and embrace a sustainable lifestyle. Let's shape a greener and healthier world together!</p>
-                  <a href="#" class="btn">Join the community</a>
-               </div>
-            </div>
+<!--- Check our blog, Join our Community, and Contact Us Preview section -->
+<div class="row" id="preview-section">
+   <!-- Check our blog card -->
+   <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+      <div class="card" style="width: 26rem;">
+         <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1704277939/happy-leaf-website/divearticles_b7z8oh.jpg" class="card-img-top" alt="Irish landscape, green hills.">
+         <div class="card-body">
+            <h5 class="card-title">Dive into our latest articles</h5>
+            <p class="card-text">Immerse yourself in a world of sustainable living. Explore eco-friendly tips to make a positive impact, discover delicious vegan recipes for a cruelty-free culinary journey, and learn about the green initiatives shaping the beautiful landscapes of Ireland.</p>
+            <a href="{% url 'blog' %}" class="btn">Check our blog</a>
          </div>
       </div>
+   </div>
+   <!-- Join our Community card -->
+   <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+      <div class="card" style="width: 26rem;">
+         <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1704277942/happy-leaf-website/joincommunity_sloxp1.jpg" class="card-img-top" alt="Group of people sitting on the ground in a green park.">
+         <div class="card-body">
+            <h5 class="card-title">Get involved</h5>
+            <p class="card-text">Ready to make a difference? Join our community and be part of the change. Explore engaging articles, connect with like-minded individuals, and embrace a sustainable lifestyle. Let's shape a greener and healthier world together!</p>
+            <a href="#" class="btn">Join the community</a>
+         </div>
+      </div>
+   </div>
+   <!-- Contact Us card -->
+   <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+      <div class="card" style="width: 26rem;">
+         <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1707555591/happy-leaf-website/contact-us-preview_ljqqjr.jpg" class="card-img-top" alt="Group of people laughing together">
+         <div class="card-body">
+            <h5 class="card-title">Contact Us</h5>
+            <p class="card-text">Have questions or suggestions? Would you like to become a contributor of this blog? Reach out! We'd love to hear from you and we are always looking for new, green, fresh content to share with our amazing community.</p>
+            <a href="{% url 'contact_urls' %}" class="btn">Contact Us</a>
+         </div>
+      </div>
+   </div>
+</div>
    </div>
 </main>
 {%endblock%}

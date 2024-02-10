@@ -77,7 +77,9 @@ hr {
     border-radius: 10px; 
 }
 #about-text {
-     background-color: #D79922;
+    background-image: url('https://res.cloudinary.com/dmncxwmip/image/upload/v1707554412/happy-leaf-website/background-about-section_nhklao.jpg'); 
+    background-size: cover; 
+    background-position: center; 
 }
 #about-text h1{
     color:#333F48 !important;
