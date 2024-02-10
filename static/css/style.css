@@ -25,9 +25,13 @@ hr {
 #nav-title-logo {
     color: #EFE2BA;
     padding: 5px;
+    font-size: 26px;
 }
 #nav-title-logo a {
-    text-decoration: none !important;
+    text-decoration: none;
+}
+#nav-title-logo a:hover {
+    text-decoration: none;
 }
 .nav-item:hover {
     text-decoration: underline;
@@ -140,6 +144,7 @@ hr {
 #footer-logo {
     color: #215924;
     background-color: #EFE2BA;
+    font-size: 26px;
     padding: 10px;
     margin-bottom: 20px;
     margin-left: 20px;

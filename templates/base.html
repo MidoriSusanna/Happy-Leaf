@@ -29,7 +29,7 @@
                   </li>
                   {% if user.is_authenticated %}
                   <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Join</a>
+                     <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome</a>
                      <div class="dropdown-menu" aria-labelledby="personal-area-dropdown">
                         <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
                      </div>
@@ -37,7 +37,7 @@
                   {% else %}
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Join
+                     Personal area
                      </a>
                      <div class="dropdown-menu" aria-labelledby="personal-area-dropdown">
                         <a class="dropdown-item" href="{% url 'account_login' %}">Log-in</a>
