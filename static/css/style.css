@@ -165,23 +165,22 @@ a:hover {
     margin-bottom: 10px;
 }
 /* About page - more information section */
-#about-page-pic {
-    width: 95%;
-    height: auto;
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-bottom: 50px;
+.head-about-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
 }
 #about-page-title{
     color:#333F48 !important;
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 25px;
     font-size: 26px;
 }
 .about-page-text{
     margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 10px;
+    margin-right: 60px;
+    margin-left: 60px;
+    margin-bottom: 50px;
 }
 /* About page - meet the team section */
 #meet-team-title {
