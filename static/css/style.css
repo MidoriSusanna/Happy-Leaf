@@ -201,12 +201,17 @@ a:hover {
     margin: 30px;
 }
 #background-container {
-    background-image: url('https://res.cloudinary.com/dmncxwmip/image/upload/v1703846752/happy-leaf-website/contact-us_bvjhv1.jpg'); 
+    background-image: url('https://res.cloudinary.com/dmncxwmip/image/upload/v1707579101/happy-leaf-website/contact-us-resized_gvgzkl.jpg'); 
     background-size: cover; 
     background-position: center; 
     height: 700px;
     padding: 20px; 
  }
+.form-group, .form-check {
+    background-color: #215924;
+    color: #EFE2BA;
+    padding: 5px;
+}
 #submit-btn {
     background-color: #215924;
     color: #EFE2BA;
@@ -222,6 +227,10 @@ a:hover {
 /* Blog Page */
 .btn-blog-pages {
     background-color: #215924;
+    color: #EFE2BA;
+}
+.btn-blog-pages:hover {
+    background-color: #4056A1;
     color: #EFE2BA;
 }
 /* Post_detail page */
