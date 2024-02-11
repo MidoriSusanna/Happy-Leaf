@@ -22,7 +22,30 @@ The website targets people interested in learning more about an eco-friendly lif
 <a href="https://github.com/MidoriSusanna/Happy-Leaf/issues?q=is%3Aissue+is%3Aopen">Full list of User Stories available here</a><br>
 <a href="https://github.com/MidoriSusanna/Happy-Leaf/milestones">Full list of Epics available here</a><br>
 
-<h1>Agile Development<h1>
+<h1>Agile Development</h1>
 <p>I utilized GitHub Issues and Projects for writing and managing user stories and epics. The Kanban board was employed to categorize stories into Todo, In Progress, and Done columns. Additionally, I applied the MoSCoW method to label stories as Must-Have, Could-Have and Should-Have.</p><br>
 <a href="https://github.com/users/MidoriSusanna/projects/1">Kanban Board</a><br>
+
+<h1>Design an User Experience</h1>
+<br>
+<p>Happy Leaf is a website designed with sustainability in mind. The layout is crafted to be easy on the eyes and welcoming, providing users with a sense of being invited and facilitating a smooth start to their journey. The chosen colors are reminiscent of nature, particularly autumn shades. The font is simple yet playful at times, striking a balance to effectively convey a serious message.<p><br>
+<br>
+Fonts: <br>
+- Comfortaa for main titles <br>
+- PT Sans for paragraphs <br>
+Colour Palette: <br>
+<img href="https://res.cloudinary.com/dmncxwmip/image/upload/v1707675698/happy-leaf-website/palette_gzbbrx.jpg" alt="colour palette"><br>
+White was left also as a colour to emphasize and keep some parts of the website clearer. <br>
+Customize background:<br>
+<p>A customise background with leaves has been made to provide even more the sense of balance and harmony in the layout. This bacjground appears in the index.html page and as a constant in all the pages related to authentication.</p><br>
+<img href="https://res.cloudinary.com/dmncxwmip/image/upload/v1707675714/happy-leaf-website/background-about-section_yee3ee.jpg" alt="customize background"><br>
+<br>
+<h2>Wireframes</h2>
+<br>
+<p>Wirefranes were created by me using Adobe Illustrator for both Dekstop and Phone:</p><br>
+<a>Wireframes for dekstop here</a>
+<br>
+<a href="/Users/susi/Desktop/Django Project/Happy-Leaf/wireframes.md">Wireframes for phone here</a>
+
+
 
