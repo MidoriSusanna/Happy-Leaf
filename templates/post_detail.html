@@ -112,20 +112,21 @@
                      {% csrf_token %}
                      <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                   </form>
+                  <!--- Script to prevent empty or blank comment submission -->
                   <script>
-                     document.addEventListener('DOMContentLoaded', function() {
+                     document.addEventListener("DOMContentLoaded", function() {
                         function validateComment() {
-                           let commentValue = document.getElementById('id_body').value.trim();
+                           let commentValue = document.getElementById("id_body").value.trim();
                            if (commentValue === '') {
-                              alert('Please type your comment correctly.');
+                              alert("Please type your comment correctly.");
                               return false;
                            }
                            return true;
                         }
                         
-                        let commentForm = document.getElementById('comment-form');
+                        let commentForm = document.getElementById("comment-form");
                         if (commentForm) {
-                           commentForm.addEventListener('submit', function(event) {
+                           commentForm.addEventListener("submit", function(event) {
                               event.preventDefault();
                               if (validateComment()) {
                                  commentForm.submit();
