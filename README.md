@@ -33,10 +33,10 @@ The website targets people interested in learning more about an eco-friendly lif
 - Comfortaa for main titles <br>
 - PT Sans for paragraphs <br>
 <u>Colour Palette:</u> <br>
-<img href="read.me_pics/palette.jpg" alt="colour palette"><br>
+<img src="read.me_pics/palette.jpg" alt="colour palette"><br>
 White was left also as a colour to emphasize and keep some parts of the website clearer. <br>
 <u>Customize background:</u>
-<img href="read.me_pics/background-about-section.jpg" alt="customize background"><br>
+<img src="read.me_pics/background-about-section.jpg" alt="customize background"><br>
 <p>A customise background with leaves has been made to provide even more the sense of balance and harmony in the layout. This bacjground appears in the index.html page and as a constant in all the pages related to authentication.</p><br>
 <br>
 <h2>Wireframes</h2>
