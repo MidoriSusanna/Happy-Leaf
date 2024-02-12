@@ -13,44 +13,50 @@
    <body>
       <!-- Header with logo and nav element, navigation menu -->
       <header>
-         <nav class="navbar navbar-expand-sm" id="navbar-element">
+         <nav class="navbar navbar-expand-md navbar-light bg-light" id="navbar-element">
             <div class="container-fluid">
-               <div class="navbar-header" id="nav-logo">
-                  <a href="{% url 'index_urls' %}" style="text-decoration: none;">
-                     <h1 id="nav-title-logo">葉 Happy Leaf</h1>
-                  </a>
-               </div>
-               <ul class="nav justify-content-end">
-                  <li class="nav-item">
-                     <a class="nav-link" href="{% url 'about_urls' %}">About</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-                  </li>
-                  {% if user.is_authenticated %}
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome</a>
-                     <div class="dropdown-menu" aria-labelledby="personal-area-dropdown">
-                        <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
-                     </div>
-                  </li>
-                  {% else %}
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="personal-area-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Personal area
-                     </a>
-                     <div class="dropdown-menu" aria-labelledby="personal-area-dropdown">
-                        <a class="dropdown-item" href="{% url 'account_login' %}">Log-in</a>
-                        <a class="dropdown-item" href="{% url 'account_signup' %}">Sign-up</a>
-                     </div>
-                     {% endif %}
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="{% url 'contact_urls' %}">Contact us</a>
-                  </li>
-               </ul>
+                <a href="{% url 'index_urls' %}" class="navbar-brand" style="text-decoration: none;">
+                    <h1 id="nav-title-logo">葉 Happy Leaf</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about_urls' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Welcome
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
+                            </div>
+                        </li>
+                        {% else %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Personal Area
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{% url 'account_login' %}">Log-in</a>
+                                <a class="dropdown-item" href="{% url 'account_signup' %}">Sign-up</a>
+                            </div>
+                        </li>
+                        {% endif %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact_urls' %}">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-         </nav>
+        </nav>
       </header>
       <!-- Alert messages -->
       <div class="container">
