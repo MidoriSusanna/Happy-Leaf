@@ -432,3 +432,10 @@ color: #215924;
         max-width: 100%;
     }
 }
+/*Media queries - Contact us form*/
+@media (max-width: 550px) {
+    #contact-form {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+}
