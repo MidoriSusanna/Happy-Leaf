@@ -41,7 +41,7 @@ White was left also as a colour to emphasize and keep some parts of the website 
 <br>
 <h2>Wireframes</h2>
 <p>Wirefranes were created by me using Adobe Illustrator for both Dekstop and Phone:</p><br>
-<a href="WIREFRAMES.md">Wireframes for dekstop here</a>
+<a href="/Users/susi/Desktop/Django Project/Happy-Leaf/WIREFRAMES.md">Wireframes for dekstop here</a>
 <br>
 <a>Wireframes for phone here</a>
 
