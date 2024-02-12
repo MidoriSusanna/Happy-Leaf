@@ -115,7 +115,7 @@ class CommentEdit(View):
             return HttpResponseRedirect(reverse('post_detail',
                                         args=[comment.post.slug]))
         else:
-            messages.error(request, "Error updating the comment.
+            messages.error(request, "Error updating the comment."
                            "Please check the form.")
             return render(
                 request,
