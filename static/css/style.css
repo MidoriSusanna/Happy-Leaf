@@ -415,3 +415,13 @@ color: #215924;
         margin: 0 auto !important;
     }
 }
+/* Media queries - Footer */
+@media (max-width: 549px) {
+    .footer-responsive-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #social-networks-title {
+        margin-top: 50px;  
+}
+}
