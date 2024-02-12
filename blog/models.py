@@ -9,19 +9,18 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Category(models.Model):
+    """A category for grouping blog posts."""
     name = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
-    
+
     def get_absolute_url(self):
-        return reverse ("blog")
-
-
-""" Create Django POST model from the database scheme """
+        return reverse("blog")
 
 
 class Post(models.Model):
+    """ Create Django POST model from the database scheme """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -35,8 +34,8 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
-    category = models.ForeignKey(
-        Category, on_delete=models.CASCADE, related_name="post_category", default=None)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE,
+                                 related_name="post_category", default=None)
 
     class Meta:
         ordering = ["-created_on"]
@@ -48,10 +47,8 @@ class Post(models.Model):
         return self.likes.count()
 
 
-""" Create Django COMMENT model from the database scheme """
-
-
 class Comment(models.Model):
+    """ Create Django COMMENT model from the database scheme """
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
     name = models.CharField(max_length=80)
