@@ -306,6 +306,13 @@ color: #EFE2BA;
     color: #EFE2BA;
 }
 /*Log out page*/
+.outer-container-1 {
+    background-image: url('https://res.cloudinary.com/dmncxwmip/image/upload/v1707554412/happy-leaf-website/background-about-section_nhklao.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
 #logout-details-container {
     margin-top: 50px;
     margin-bottom: 100px;
