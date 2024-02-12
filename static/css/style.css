@@ -425,3 +425,10 @@ color: #215924;
         margin-top: 50px;  
 }
 }
+/*Media queries - About page*/
+@media (max-width: 919px) {
+    #meet-team .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
