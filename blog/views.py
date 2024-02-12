@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
@@ -77,8 +78,10 @@ class CommentDelete(View):
         if request.user.is_superuser or request.user.username == comment.name:
             if request.POST.get("confirm_delete"):
                 comment.delete()
+            messages.success(request, "You have successfully deleted the comment.")
             return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
         else:
+            messages.error(request, "You do not have permission to delete this comment.")
             return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
         
 
@@ -101,8 +104,10 @@ class CommentEdit(View):
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
+            messages.success(request, "You have successfully updated the comment.")
             return HttpResponseRedirect(reverse('post_detail', args=[comment.post.slug]))
         else:
+            messages.error(request, "Error updating the comment. Please check the form.")
             return render(
                 request,
                 "comment_edit.html",
