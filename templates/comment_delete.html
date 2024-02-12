@@ -16,7 +16,7 @@
                </div>
                <input type="hidden" name="confirm_delete" value="1">
                <button type="submit" id="delete-comment-btn">Yes, delete</button>
-               <a href="{% url 'post_detail' comment.post.slug %}">Cancel</a>
+               <a href="{% url 'post_detail' comment.post.slug %}" class="auth-form-link">Cancel</a>
             </form>
          </div>
       </div>
