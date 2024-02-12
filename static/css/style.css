@@ -287,13 +287,12 @@ padding: 10px;
 background-color: #4056A1;
 color: #EFE2BA;
 }
-.auth-form-link a {
-    color: #215924;
+.auth-form-link {
+    color: #215924 !important;
     font-weight: bold;
 }
-
-.auth-form-link a:hover {
-    color: #215924;
+.auth-form-link:hover {
+    color: #215924 !important;
     text-decoration: underline;
 }
 /* Signup page */
