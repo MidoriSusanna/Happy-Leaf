@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -15,48 +16,47 @@
       <header>
          <nav class="navbar navbar-expand-md navbar-light bg-light" id="navbar-element">
             <div class="container-fluid">
-                <a href="{% url 'index_urls' %}" class="navbar-brand" style="text-decoration: none;">
-                    <h1 id="nav-title-logo">葉 Happy Leaf</h1>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about_urls' %}">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-                        </li>
-                        {% if user.is_authenticated %}
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Welcome
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
-                            </div>
-                        </li>
-                        {% else %}
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Personal Area
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="{% url 'account_login' %}">Log-in</a>
-                                <a class="dropdown-item" href="{% url 'account_signup' %}">Sign-up</a>
-                            </div>
-                        </li>
-                        {% endif %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'contact_urls' %}">Contact us</a>
-                        </li>
-                    </ul>
-                </div>
+               <a href="{% url 'index_urls' %}" class="navbar-brand" style="text-decoration: none;">
+                  <h1 id="nav-title-logo">葉 Happy Leaf</h1>
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about_urls' %}">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                     </li>
+                     {% if user.is_authenticated %}
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Welcome
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                           <a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a>
+                        </div>
+                     </li>
+                     {% else %}
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Personal Area
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                           <a class="dropdown-item" href="{% url 'account_login' %}">Log-in</a>
+                           <a class="dropdown-item" href="{% url 'account_signup' %}">Sign-up</a>
+                        </div>
+                     </li>
+                     {% endif %}
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact_urls' %}">Contact us</a>
+                     </li>
+                  </ul>
+               </div>
             </div>
-        </nav>
+         </nav>
       </header>
       <!-- Alert messages -->
       <div class="container">
@@ -77,38 +77,38 @@
       <!--- Footer with contacts and social media -->
       <footer class="container-fluid">
          <div id="footer-details" class="row">
-             <div class="col-md-4 d-none d-md-block">
-                 <h1 id="footer-logo">葉 Happy Leaf</h1>
-                 <p id="footer-text">Join us in fostering a supportive space where we encourage positive change, personal growth, and a collective commitment to a greener world. </p>
-             </div>
-             <div class="col-md-4 col-6 footer-responsive-column"> 
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item"><a href="{% url 'about_urls' %}">About</a></li>
-                     <li class="list-group-item"><a href="{% url 'blog' %}">Blog</a></li>
-                     <!-- Redirect to the sign-up page when clicking "Join" if the user is not authenticated -->
-                     {% if not user.is_authenticated %}
-                     <li class="list-group-item"><a href="{% url 'account_signup' %}">Join</a></li>
-                      <!-- Hide section for authenticated users -->
-                     {% else %}
-                     <li class="list-group-item d-none"><a href="{% url 'account_signup' %}">Join</a></li>
-                     {% endif %}
-                     <li class="list-group-item"><a href="{% url 'contact_urls' %}">Contact us</a></li>
-                 </ul>
-             </div>
-             <div class="col-md-4 col-6 footer-responsive-column">
-                 <h5 id="social-networks-title">Follow us:</h5>
-                 <ul class="social-networks list-unstyled">
-                     <li>
-                         <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit Our Facebook Page (opens in a new tab)"><i class="fa-brands fa-facebook list-group-item">    happyleaf</i></a>
-                     </li>
-                     <li>
-                         <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Visit Our YouTube Page (opens in a new tab)"><i class="fa-brands fa-youtube list-group-item">    happyleafvideo</i></a>
-                     </li>
-                     <li>
-                         <a href="https://Instagram.com" target="_blank" rel="noopener" aria-label="Visit Our Instagram Page (opens in a new tab)"><i class="fa-brands fa-instagram list-group-item">    ha.happyleaf</i></a>
-                     </li>
-                 </ul>
-             </div>
+            <div class="col-md-4 d-none d-md-block">
+               <h1 id="footer-logo">葉 Happy Leaf</h1>
+               <p id="footer-text">Join us in fostering a supportive space where we encourage positive change, personal growth, and a collective commitment to a greener world. </p>
+            </div>
+            <div class="col-md-4 col-6 footer-responsive-column">
+               <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="{% url 'about_urls' %}">About</a></li>
+                  <li class="list-group-item"><a href="{% url 'blog' %}">Blog</a></li>
+                  <!-- Redirect to the sign-up page when clicking "Join" if the user is not authenticated -->
+                  {% if not user.is_authenticated %}
+                  <li class="list-group-item"><a href="{% url 'account_signup' %}">Join</a></li>
+                  <!-- Hide section for authenticated users -->
+                  {% else %}
+                  <li class="list-group-item d-none"><a href="{% url 'account_signup' %}">Join</a></li>
+                  {% endif %}
+                  <li class="list-group-item"><a href="{% url 'contact_urls' %}">Contact us</a></li>
+               </ul>
+            </div>
+            <div class="col-md-4 col-6 footer-responsive-column">
+               <h5 id="social-networks-title">Follow us:</h5>
+               <ul class="social-networks list-unstyled">
+                  <li>
+                     <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit Our Facebook Page (opens in a new tab)"><i class="fa-brands fa-facebook list-group-item">    happyleaf</i></a>
+                  </li>
+                  <li>
+                     <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Visit Our YouTube Page (opens in a new tab)"><i class="fa-brands fa-youtube list-group-item">    happyleafvideo</i></a>
+                  </li>
+                  <li>
+                     <a href="https://Instagram.com" target="_blank" rel="noopener" aria-label="Visit Our Instagram Page (opens in a new tab)"><i class="fa-brands fa-instagram list-group-item">    ha.happyleaf</i></a>
+                  </li>
+               </ul>
+            </div>
          </div>
          <script src="https://kit.fontawesome.com/ea255401c6.js" crossorigin="anonymous"></script>
       </footer>

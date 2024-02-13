@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
 <main class="grid">
    <div class="container-fluid">
       <!-- Search Bar -->
@@ -30,9 +31,9 @@
                      <div class="image-container">
                         {% if "placeholder" in post.featured_image.url %}
                         <img class="card-img-top"
-                           src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705759910/happy-leaf-website/notavailable_cqwccw.png">
+                           src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705759910/happy-leaf-website/notavailable_cqwccw.png" alt="{{ post.title }}">
                         {% else %}
-                        <img class="card-img-top" src="{{ post.featured_image.url }}">
+                        <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                         {% endif %}
                         <div class="image-flash">
                            <p class="author">Author: {{ post.author }}</p>
