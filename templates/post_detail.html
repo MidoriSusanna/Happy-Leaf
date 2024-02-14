@@ -20,9 +20,9 @@
                <div class="d-none d-md-block col-md-6 masthead-image">
                   <!-- Display the featured image if available, else use a default image -->
                   {% if "placeholder" in post.featured_image.url %}
-                  <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705759910/happy-leaf-website/notavailable_cqwccw.png" width="100%">
+                  <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705759910/happy-leaf-website/notavailable_cqwccw.png" width="100%" alt="{{ post.title }}">
                   {% else %}
-                  <img src="{{ post.featured_image.url }}" width="100%">
+                  <img src="{{ post.featured_image.url }}" width="100%" alt="{{ post.title }}">
                   {% endif %}
                </div>
             </div>

@@ -447,3 +447,9 @@ color: #215924;
         margin: unset !important;
     }
 }
+/*Media queries - Index page*/
+@media (max-width: 550px) {
+    .carousel-caption h5 {
+        font-size: 18px !important;
+}
+}
