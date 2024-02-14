@@ -4,7 +4,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Comfortaa', sans-serif;
     color:#EFE2BA;
 }
-
 body {
     font-family: 'PT Sans', sans-serif;
     color:#333F48;
@@ -258,6 +257,10 @@ a:hover {
     color: #215924 !important;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.masthead-image img{
+    width: 100%;
+    height: auto;
 }
 /* Login page */
 .outer-container {

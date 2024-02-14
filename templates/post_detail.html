@@ -20,9 +20,9 @@
                <div class="d-none d-md-block col-md-6 masthead-image">
                   <!-- Display the featured image if available, else use a default image -->
                   {% if "placeholder" in post.featured_image.url %}
-                  <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705759910/happy-leaf-website/notavailable_cqwccw.png" width="100%" alt="{{ post.title }}">
+                  <img src="https://res.cloudinary.com/dmncxwmip/image/upload/v1705759910/happy-leaf-website/notavailable_cqwccw.png" alt="{{ post.title }}">
                   {% else %}
-                  <img src="{{ post.featured_image.url }}" width="100%" alt="{{ post.title }}">
+                  <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                   {% endif %}
                </div>
             </div>
@@ -39,22 +39,20 @@
                   <div class="row">
                      <div class="col-1">
                         <!-- Enable likes if authenticated and display different icon -->
-                        <strong>
-                           {% if user.is_authenticated %}
-                           <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                              {% csrf_token %}
-                              {% if liked %}
-                              <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
-                              {% else %}
-                              <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
-                              {% endif %}
-                           </form>
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                           {% csrf_token %}
+                           {% if liked %}
+                           <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
                            {% else %}
-                           <span class="text-secondary"><i class="far fa-heart"></i></span>
+                           <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
                            {% endif %}
-                           <!-- Display the number of likes -->
-                           <span class="text-secondary">{{ post.number_of_likes }} </span>
-                        </strong>
+                        </form>
+                        {% else %}
+                        <span class="text-secondary"><i class="far fa-heart"></i></span>
+                        {% endif %}
+                        <!-- Display the number of likes -->
+                        <span class="text-secondary">{{ post.number_of_likes }} </span>
                      </div>
                      <div class="col-1">
                         <!-- Display the total number of comments -->
