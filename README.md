@@ -56,9 +56,9 @@ A customise background with leaves has been made to provide even more the sense 
 
 ## Wireframes
 
-Wirefranes were created by me using Adobe Illustrator for both Dekstop and Phone:
+Wirefranes were created by me using Adobe Illustrator:
 
-[Wireframes for dekstop and phone](WIREFRAME.md)
+[Wireframes](WIREFRAME.md)
 
 # Features 
 
@@ -274,6 +274,36 @@ Django installs a some packages by default and some packages were instead instal
 **GitHub**: hosting site for the repository of the project.
 
 **Heroku**: cloud-based platform where the website was deployed.
+
+# Deployment
+
+## Version Control
+The website was created in VSCode and pushed to Github to the repository "Happy-Leaf".
+- git add: preliminary step before committing new elements.
+- git commit -m "": commit changes to the repository.
+- git push: push the committed code to the GitHub repository.
+
+## Deployment to Heroku
+
+The project was deployed to the cloud platform Heroku. The deployed project can be found at this link:
+https://happy-leaf-454cbc041048.herokuapp.com/index/
+
+**Deployment steps:**
+- In order for the project to run on Heroku, we need Heroku to install the dependencies we used in the project. The list of dependencies will go in our requirements.txt file here. To create our list of requirements, we use the following command in the terminal 'pip3 freeze > requirements.txt'.
+- Ensure the Procfile is updated with 'web: gunicorn happy_leaf.wsgi', this is needed to make the app run.
+- Ensure to collect the static files before deployment with 'run python manage.py collectstatic'
+- Log into the Heroku account, then on the dashboard, click "Create new app".
+- Name the App with a unique name and select your region (EU/USA) and click "create app".
+- Click the "Settings" tab on the top-left to add the Config Var.
+- The key is PORT and the value is 8000. If this is not added, deployment may fail.
+- Add Config Var for cloudinary_url, database_url, port (800), secret_key.
+- It is important to keep these keys secret in the env.py file, added to the .gitignore file and do not commit them.
+- It is important to keep DEBUG = False in the settings.py file of our app.
+- Select Deployment method: Github.
+- Confirm conneting with Github.
+- Search the repository name to connect with Github (in this case "Happy-Leaf"). Click "Search" and "Connect".
+- Enable automatic deploy: this way Heroku will rebuild the app every time a new change is pushed to Github. It is also possible to use the manual deploy. 
+- The site should show “App was successfully deployed” message and a button to view the deployed app.
 
 # Credits
 
