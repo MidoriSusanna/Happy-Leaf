@@ -225,11 +225,72 @@ Manual Testing and validation can be found here:
 
 # Tools and technologies used
 
-## Languages and Framework
+## Languages and Frameworks
 
 **Django** is utilized as the web framework, built on Python for server-side programming.
+
 **Python** acts as the primary backend programming language.
+
 **HTML** is used for both markup and template design.
+
 **CSS** is applied for styling purposes, customised CSS has been added to Bootstrap tags. 
+
 **Bootstrap** is selected as the CSS framework for responsive design.
+
 **JavaScript** is mainly used to implement the contact form through the API emailJs. 
+
+## Django Packages
+
+Django installs a some packages by default and some packages were instead installed manually:
+
+**cloudinary**: Provides an easy-to-use interface for integrating Cloudinary services, allowing for advanced media management.
+
+**dj3-cloudinary-storage**: a Django storage backend for Cloudinary integration.
+
+**dj-database-url**: simplifies database configuration by using a single environment variable.
+
+**django-allauth**: offers comprehensive authentication features and templates, including social login, email verification, etc. to Django projects.
+
+**django-crispy-forms**: enhances Django forms by allowing for easy customization of form layouts.
+
+**django-summernote**: integrates the Summernote WYSIWYG editor with Django, enabling rich text editing capabilities in Django admin panel.
+
+**gunicorn**: python WSGI HTTP Server for better deployment.
+
+**psycopg2-binary**: PostgreSQL database adapter for Python, necessary for connecting the Django project to a PostgreSQL database.
+
+## Others
+
+**Font Awesome**: website used for icons.
+
+**ElephantSQL**: it is the cloud-based PostgreSQL database management service that was used for this project.
+
+**emailJS**: API used for handling the emails through the contact form. By using the EmailJS API, it is possible to integrate email functionalities into the application by making HTTP requests to the EmailJS servers. 
+
+**VS Code**: used as a main coding environment. 
+
+**Git**: used for version control.
+
+**GitHub**: hosting site for the repository of the project.
+
+**Heroku**: cloud-based platform where the website was deployed.
+
+# Credits
+
+- My project is inspired to the Walkthrough Code Institute project "I Think Therefore I blog".
+- Bootstrap documentation has been used for different parts of the website, as for example the carousel in the index page.
+- For the category model this has been very helpful: https://www.youtube.com/watch?v=_ph8GF84fX4
+- The search bar has been implemented with the help of this tutorial:
+https://www.youtube.com/watch?v=VL5ZNCjXEbw
+- To change the colour of the nav bar toggler icon: https://stackoverflow.com/questions/42586729/how-can-i-change-the-bootstrap-4-navbar-button-icon-color
+- Pictures were taken from Pexels.com and Unsplash.com
+- Blog posts content was created with the help of ChatGPT
+- The About section poem and text was taken from:
+https://jti.lib.virginia.edu/japanese/kokinshu/Cook/CookKok.html
+http://www.wakapoetry.net/poems/anthologies/kokinshu/
+- Messages have been implemented with the help of the message framework Django documentation: https://docs.djangoproject.com/en/3.2/ref/contrib/messages/#using-messages-in-views-and-templates
+- Wireframes were made by me using Adobe Illustrator
+- The background was created by me using Adobe Illustrator
+- "Meet the Team" avatars were created by me using Canva.
+- Colour Palette was chosen with the help of: https://colorhunt.co
+- For good HTML indentation: https://www.freeformatter.com/html-formatter.html
