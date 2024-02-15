@@ -188,4 +188,22 @@ The page for creating drafts/posts is built using Summernote, a text editor that
 The admin has the authority to approve or not user comments via the comment section within the admin panel.
 ![Approve comments admin](read.me_pics/features/comment-approve-panel.png)
 
+# Features left to implement
+
+The original idea envisions this website not only as a blog but also as a personal diary to record our own eco-friendly journey. Here are some potential features to implement:
+- As a user I can create my profile with a picture and some basic information so that I can create an identity for the blog community and identify other users too. 
+- As a user I can see other user's basic profiles and be able to identify them when they comment so that I can have a better idea of the community and recognise people I interact with. 
+- As an authenticated user I can create a diary page (which I can only see) so that I can take notes about my eco-friendly journey. 
+- As an authenticated user I can check the older 
+pages of my diary so that I can keep track of the progresses of my eco-friendly journey. 
+- As an authenticated admin I can like comments of other users so that I can express my agreement or disagreement with what another user has written. 
+
 # Database Chart
+
+![Database chart](read.me_pics/database_pic/database-charts.png)
+
+**Relationships**
+- **Post-Author:** A many-to-one relationship from Post to Django's built-in User model (author field). Each post is written by one user, and a user can write many posts.
+-	**Post-Likes** A many-to-many relationship between Post and User (likes field), allowing many users to like many posts.
+- **Post-Category** A many-to-one relationship from Post to Category (category field). Each post belongs to one category, and a category can contain many posts.
+- **Comment-Post** A many-to-one relationship from Comment to Post (post field). Each comment is associated with one post, and a post can have many comments.
