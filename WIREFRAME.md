@@ -16,5 +16,3 @@
 
 **Authentication pages**
 ![Authentication page wireframe](read.me_pics/wireframes-AUTH-D.jpg)
-
-

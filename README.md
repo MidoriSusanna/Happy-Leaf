@@ -58,7 +58,7 @@ A customise background with leaves has been made to provide even more the sense 
 
 Wirefranes were created by me using Adobe Illustrator for both Dekstop and Phone:
 
-[Wireframes for dekstop and phone](WIREFRAMES.md)
+[Wireframes for dekstop and phone](WIREFRAME.md)
 
 # Features 
 
