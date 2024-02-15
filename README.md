@@ -7,6 +7,9 @@ The website targets people interested in learning more about an eco-friendly lif
 
 The name of the website, Happy Leaf, was chosen to evoke the concept of happiness and harmonious nature. The Japanese kanji for 'leaf' serves as the logo, reflecting the tradition of nature poetry and the ancient production of the Japanese.
 
+![Mock up](read.me_pics/mockup-happyleaf.jpg)
+
+[Link to the Deployed website](https://happy-leaf-454cbc041048.herokuapp.com/index/)
 
 # Project Goals and Stories
 ## Project Goals
