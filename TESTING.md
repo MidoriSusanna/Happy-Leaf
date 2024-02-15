@@ -37,7 +37,7 @@ The type warning is related to the script added to use emailJs.
 
 - Post_detail.html:
 ![Post detail html check](read.me_pics/testing_pics/postdetail-html-check.png)
-In the post_detail.html page 42 errors and warnings have been found. Those errors are related to the installation of SummerNote. 
+In the post_detail.html page 42 errors and warnings have been found. Those errors are related to the installation of SummerNote editor and its code.
 
 # CSS
 

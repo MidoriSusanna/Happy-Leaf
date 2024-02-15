@@ -27,7 +27,9 @@ The name of the website, Happy Leaf, was chosen to evoke the concept of happines
 ## Epics and User Stories
 [Full list of User Stories available here](https://github.com/MidoriSusanna/Happy-Leaf/issues?q=is%3Aissue+is%3Aopen>)
 
-[Full list of Epics available here](https://github.com/MidoriSusanna/Happy-Leaf/milestones)
+[Full list of Closed Epics available here](https://github.com/MidoriSusanna/Happy-Leaf/milestones?state=closed)
+
+[Full list of Open Epics available here](https://github.com/MidoriSusanna/Happy-Leaf/milestones?state=open)
 
 
 # Agile Development
@@ -122,6 +124,13 @@ The blog page aims to be tidy and clear. At the top of the page, there is a sear
 
 ![Blog page](read.me_pics/features/blog-page.png)
 ![Blog pagination](read.me_pics/features/blog-pagination.png)
+
+### Search bar
+
+The search bar has been designed to enhance the user experience by allowing direct searches for specific categories or topics of interest. Upon entering a query and clicking the search button, the website will display “Results for (query)”.
+
+![Search Bar](read.me_pics/search-bar.png)
+
 
 ## Post detail page
 
@@ -327,3 +336,4 @@ http://www.wakapoetry.net/poems/anthologies/kokinshu/
 - "Meet the Team" avatars were created by me using Canva.
 - Colour Palette was chosen with the help of: https://colorhunt.co
 - For good HTML indentation: https://www.freeformatter.com/html-formatter.html
+- Mock up .psd file: https://www.mockupworld.co/all-mockups/
