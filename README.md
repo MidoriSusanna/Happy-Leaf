@@ -211,3 +211,13 @@ pages of my diary so that I can keep track of the progresses of my eco-friendly 
 Manual Testing and validation can be found here:
 
 [TESTING](TESTING.md)
+
+# Bugs
+
+- When I changed my model.py file to introduce the category model, I needed to reset my database and migrate the changes again ('python manage.py makemigrations')in order to reset the relationships between models.
+- I have encountered several deployment issues, mostly related to the versions of the package dependencies installed in the requirements.txt document.
+- I encountered an issue setting up the contact form of the website. I wanted to introduce a dropdown menu to show the topic of the inquiry in the email template. At first, the template was not showing titles but numbers (values added to the option tag). I fixed this by working on the variable inquiryType.
+- I set up the site using Bootstrap tags for responsiveness, but in many cases, I had to customize the CSS with media queries to provide a better user experience.
+- I was not sure about how to render the HTML templates which do not contain Python/Django functionalities in the deployed site, according to the MVC system. In the end, I simply rendered them as a request with return render.
+- I mainly used class-based views to simplify the code and be able to reuse them, refactoring my code sometimes.
+- The blog search view was initially only handling title search, but I thought that wouldn’t be good for a sectorial search (according to the topic). I encountered some issues, but then I was able to include the category in the search. I used Q, which is a Django model utility that allows for complex database queries. It stands for "query" and is used to encapsulate a set of keyword arguments. I also used icontains to eliminate case sensitivity.

@@ -65,7 +65,7 @@ The files settings.py and env.py have not undergone validation against the PP8 s
 - Apps.py:
 ![Apps py check](read.me_pics/testing_pics/appspy-check.png)
 
-- Fomrs.py
+- Forms.py
 ![Forms py check](read.me_pics/testing_pics/formspy-check.png)
 
 - Models.py
