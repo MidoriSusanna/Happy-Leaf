@@ -58,9 +58,7 @@ A customise background with leaves has been made to provide even more the sense 
 
 Wirefranes were created by me using Adobe Illustrator for both Dekstop and Phone:
 
-[Wireframes for dekstop](WIREFRAMES.md")
-
-[Wireframes for phone]()
+[Wireframes for dekstop and phone](WIREFRAMES.md)
 
 # Features 
 
@@ -112,7 +110,7 @@ The footer also includes links to all pages and contains a brief explanation of 
 
 The 'About Us' page comprises two main sections, delving deeper into the explanation of the blog's mission. These sections are titled 'More about Happy Leaf' and 'Meet the Team'. Consistent with the website's nature-oriented style, administrators are depicted as avatars. These avatars were created by me using Canva.
 
-![More about Happy Leaf section](read.me_pics/features/about-meet-team.png)
+![More about Happy Leaf section](read.me_pics/features/about-page.png)
 ![Meet the team section](read.me_pics/features/about-meet-team.png)
 
 ## Blog page
@@ -174,7 +172,7 @@ Messages are implemented using the message function of Django. Additionally, a J
 ![Empty comment messagge](read.me_pics/features/empty-comment-mess.png)
 ![Blank comment message](read.me_pics/features/blank-comment-mess.png)
 
-7. The contact form also has some validatio messages: an alert for the privacy checkbox and the thank you message after submission. 
+7. The contact form also has some validatin messages: an alert for the privacy checkbox and the thank you message after submission. 
 
 ## Admin Panel
 
@@ -207,3 +205,9 @@ pages of my diary so that I can keep track of the progresses of my eco-friendly 
 -	**Post-Likes** A many-to-many relationship between Post and User (likes field), allowing many users to like many posts.
 - **Post-Category** A many-to-one relationship from Post to Category (category field). Each post belongs to one category, and a category can contain many posts.
 - **Comment-Post** A many-to-one relationship from Comment to Post (post field). Each comment is associated with one post, and a post can have many comments.
+
+# Testing
+
+Manual Testing and validation can be found here:
+
+[TESTING](TESTING.md)
