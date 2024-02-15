@@ -222,3 +222,14 @@ Manual Testing and validation can be found here:
 - I mainly used class-based views to simplify the code and be able to reuse them, refactoring my code sometimes.
 - The blog search view was initially only handling title search, but I thought that wouldn’t be good for a sectorial search (according to the topic). I encountered some issues, but then I was able to include the category in the search. I used Q, which is a Django model utility that allows for complex database queries. It stands for "query" and is used to encapsulate a set of keyword arguments. I also used icontains to eliminate case sensitivity.
 - While validating HTML, I identified an error due to the absence of the 'alt' attribute in images uploaded via the admin panel using Summernote. To resolve this issue, I utilized the 'title' attribute from the image object and set the 'alt' attribute dynamically using 'alt="{{ post.title }}"'.
+
+# Tools and technologies used
+
+## Languages and Framework
+
+**Django** is utilized as the web framework, built on Python for server-side programming.
+**Python** acts as the primary backend programming language.
+**HTML** is used for both markup and template design.
+**CSS** is applied for styling purposes, customised CSS has been added to Bootstrap tags. 
+**Bootstrap** is selected as the CSS framework for responsive design.
+**JavaScript** is mainly used to implement the contact form through the API emailJs. 
